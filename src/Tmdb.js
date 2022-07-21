@@ -11,59 +11,59 @@ export default {
   getHomeList: async () => {
     return [
       {
-        slug: "originais",
+        slug: "originals",
         title: "Originais do Netflix",
-        items: await basicFetch(
+        item: await basicFetch(
           `/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`
         ),
       },
       {
         slug: "trending",
-        title: "Recomendados para você",
-        items: await basicFetch(
+        title: "Recomendados para Você",
+        item: await basicFetch(
           `/trending/all/week?language=pt-BR&api_key=${API_KEY}`
         ),
       },
       {
         slug: "toprated",
         title: "Em Alta",
-        items: await basicFetch(
+        item: await basicFetch(
           `/movie/top_rated?language=pt-BR&api_key=${API_KEY}`
         ),
       },
       {
         slug: "action",
         title: "Ação",
-        items: await basicFetch(
-          `/discover/movie?with_genres=28&language=pt-BR&api_key=${API_KEY}`
+        item: await basicFetch(
+          `/discover/movie?with_geners=28&language=pt-BR&api_key=${API_KEY}`
         ),
       },
       {
         slug: "comedy",
         title: "Comédia",
-        items: await basicFetch(
-          `/discover/movie?with_genres=35&language=pt-BR&api_key=${API_KEY}`
+        item: await basicFetch(
+          `/discover/movie?with_geners=35&language=pt-BR&api_key=${API_KEY}`
         ),
       },
       {
         slug: "horror",
         title: "Terror",
-        items: await basicFetch(
-          `/discover/movie?with_genres=27&language=pt-BR&api_key=${API_KEY}`
+        item: await basicFetch(
+          `/discover/movie?with_geners=27&language=pt-BR&api_key=${API_KEY}`
         ),
       },
       {
         slug: "romance",
         title: "Romance",
-        items: await basicFetch(
-          `/discover/movie?with_genres=10749&language=pt-BR&api_key=${API_KEY}`
+        item: await basicFetch(
+          `/discover/movie?with_geners=10749&language=pt-BR&api_key=${API_KEY}`
         ),
       },
       {
         slug: "documentary",
-        title: "Documentário",
-        items: await basicFetch(
-          `/discover/movie?with_genres=99&language=pt-BR&api_key=${API_KEY}`
+        title: "Documentários",
+        item: await basicFetch(
+          `/discover/movie?with_geners=99&language=pt-BR&api_key=${API_KEY}`
         ),
       },
     ];

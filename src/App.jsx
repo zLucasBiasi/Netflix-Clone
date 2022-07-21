@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { Movie } from "./components/MovieRow/MovieRow";
+import GlobalStyle from "./styles/global";
+
 import Tmdb from "./Tmdb";
 
 const App = () => {
@@ -15,8 +18,14 @@ const App = () => {
   }, []);
   return (
     <>
-      <h1>hello</h1>
-      <h2>world</h2>
+      <GlobalStyle />
+      <div className="page">
+        <section className="lists">
+          {movieList.map((item, key) => (
+            <Movie key={key} title={item.title} items={item.item} />
+          ))}
+        </section>
+      </div>
     </>
   );
 };
